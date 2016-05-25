@@ -1,0 +1,42 @@
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Polarity Music - deep electronic music from berlin', base:""})
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js")
+
+	script()
+		window.onload = function(){
+			var wavesurfer = WaveSurfer.create({
+				container: '#waveform',
+				waveColor: '#878995',
+				progressColor: '#504861'
+			});
+			wavesurfer.load('https://polaritymusic.s3.amazonaws.com/BionicPrincess-1.mp3');
+
+			play = function(){
+				wavesurfer.playPause();
+			}
+		}
+
+	style.
+		body {
+			background-image: url(medien-index/TilShakeheadAll.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content-block {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+block body
+	body#body
+		div.content-block 
+			h1 Polarity - Til Shakehead
+			p.intro Hi, i´m polarity from berlin and doing electronic music. Most of my stuff is for free and under a 
+				a(href='https://creativecommons.org/licenses/by-sa/3.0/') CC licence
+				| . So enjoy and use my music for any project you need.
+
+			div#waveform
+			button(onclick="play()") play
+		footer
+			p.small Robert Agthe, Matternstraße 14, 10249 Berlin

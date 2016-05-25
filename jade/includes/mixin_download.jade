@@ -1,0 +1,48 @@
+mixin download(link)
+	style
+		div.mixin-download {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 700px;
+			height: 100px;
+			margin-bottom: 30px;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-webkit-flex-wrap: nowrap;
+			-ms-flex-wrap: nowrap;
+			flex-wrap: nowrap;
+			-webkit-justify-content: space-around;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+			-webkit-align-content: stretch;
+			-ms-flex-line-pack: stretch;
+			align-content: stretch;
+			-webkit-align-items: flex-start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+		}
+		div.mixin-download a {
+			text-decoration: none;
+			text-align: center;
+			padding: 1.2em;
+			font-size: 150%;
+			font-size: 2vmin;
+			font-weight: bold;
+			color: #fff;
+			text-transform: uppercase;
+			width: 35%;
+		}
+		div.mixin-download a:link.donate {
+			background-color: red;
+		}
+		div.mixin-download a:link.download {
+			background-color: green;
+		}
+	div.mixin-download
+		a.donate(href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G4H7KJWTT7T5N") Donate
+		a.download(href=link) Download

@@ -1,0 +1,48 @@
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Polarity - Bionic Princess Ambient', base:""})
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js")
+
+	script()
+		window.onload = function(){
+			var wavesurfer = WaveSurfer.create({
+				container: '#waveform',
+				waveColor: '#A8A59E',
+				progressColor: '#4F3F3D'
+			});
+			wavesurfer.load('https://polaritymusic.s3.amazonaws.com/BionicPrincess-1.mp3');
+
+			play = function(){
+				wavesurfer.playPause();
+			}
+		}
+
+	style.
+		body {
+			background-image: url(medien-index/bionic-princess.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content-block {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+block body
+	body#body
+		div.content-block 
+			h1 Bionic Princess
+			p.intro Far away in a strange galaxy, lives the Bionic Princess
+			p Just created a small random ambient track. It´s pretty random. The chords looping the whole time but filters, fx and additional synths and samples are randomized. took me 20min, so pretty raw. njoy!
+			p
+				:markdown
+					License: [CC licence](https://creativecommons.org/licenses/by-sa/3.0/) 
+					DAW: [bitwig](http://bitwig.com) 
+					Image: [Robert Agthe](http://robert-agthe)
+
+			div#waveform
+			button(onclick="play()") play
+		footer
+			p.small
+				:markdown
+					[polarity](/), Robert Agthe, Matternstraße 14, 10249 Berlin

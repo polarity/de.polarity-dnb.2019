@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
+* {
+	line-height: 1.5em;
+	color: #111;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+body {
+	font-style: normal;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	background-color: #efefef;
+	margin: 0;
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 6em;
+	padding-top: 3em;
+}
+h1, h2, h3 {
+}
+h1 {
+	font-size: 3em;
+	margin:0;
+	margin-bottom: 0.5em;
+}
+h2 {
+	font-size: 2em;
+	margin-bottom: 0.5em;
+}
+p.intro {
+	font-size: 1.5em;
+}
+p.small {
+	font-size: 0.8em;	
+	font-style: italic;
+}
+ul {
+	margin-left: 1em;
+}
+a:link{
+	color: blue;
+}
+a:visited {
+	color: grey;
+}
+a:hover {
+	color: darkblue;
+}
+footer {
+	line-height: 0;
+	padding: 1em;
+	margin-top: 1em;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin-bottom: 0;
+	background-color: rgba(255,255,255,0.5);
+}
+footer p {
+	margin: 0;
+}
+.content-block {
+	padding: 3%;
+	background-color: rgba(255, 255, 255, 0.6);
+	max-width: 740px;
+	margin: auto;
+}
+#waveform {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
