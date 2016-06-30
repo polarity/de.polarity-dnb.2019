@@ -51,10 +51,10 @@ ul {
 	margin-left: 1em;
 }
 a:link{
-	color: blue;
+	color: #001B8D;
 }
 a:visited {
-	color: grey;
+	color: #000;
 }
 a:hover {
 	color: darkblue;
