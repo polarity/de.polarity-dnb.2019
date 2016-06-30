@@ -1,0 +1,82 @@
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Bitwig Tools by polarity', base:""})
+
+	// facebook
+	<meta property="og:title" content="Polarity Bitwig Tools">
+	<meta property="og:site_name" content="Polarity Music">
+	<meta property="og:url" content="http://polarity-dnb.de/bitwig.html">
+	<meta property="og:description" content="Free tools, devices, presets and complete projects for Bitwig by Polarity Berlin.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://polarity-dnb.de/medien-index/sc-bitwig.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="675">
+
+	style.
+		body {
+			background-image: url(medien-index/bg-bitwig.png);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content-block {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+block body
+	body#body
+		div.content-block 
+			+nav()
+			h1 Polarity Bitwig Tools
+			p.intro
+				a(href="https://www.bitwig.com") Bitwig is a DAW out of berlin. 
+				| I did some free presets, devices and projects for everyone to download.
+
+			p 
+				:markdown
+					All listed tools have videos up on youtube. Would be nice when you [subscribe my channel](https://www.youtube.com/user/polaritydnb) or vote my videos. Want to communicate or report broken links and errors? Visit our [Bitwig Discord channel](https://discord.gg/0g2ZPafIN3eWParf) and say Hi! or drop me a message on [Facebook](https://www.facebook.com/polaritydnb).
+
+			h2 Bitwig Devices
+			p 
+				:markdown
+					Bitwig devices chained together to build new powerful chain containers. [Watch the complete Youtube Playlist](https://www.youtube.com/playlist?list=PLyCfny1Hc_buWzQkBDlaIN9wo087wqdKp).
+			ul
+				li 
+					:markdown
+						**EFFEKTWERK** - Trigger FX with your midi keyboard! You know Effectrix, Turnado, Stutter Edit, Ableton Beat Repeater? It´s like that, for Bitwig and free.  
+						[Download Effektwerk](https://s3.eu-central-1.amazonaws.com/polaritymusic/tools-bitwig/Polarity-Bitwig-Preset-Effektwerk-1.zip) | [Watch the video](https://youtu.be/pyl_TOHb6LY)
+				li 
+					:markdown
+						**KNISTER** - It tries to simulate vinyl crackle noise with only bitwig devices.  
+						[Download KNISTER](http://pub.scriptshit.de/PoliKnister-1.zip) | [Watch the video](https://youtu.be/TnmjhPBgI80?list=PLyCfny1Hc_buWzQkBDlaIN9wo087wqdKp)
+				li 
+					:markdown
+						**HALTMAL** - It delays/loops the current audio forever. Press a midi note to reset the feedback loop and bypass the delay effect.  
+						[Download HALTMAL](http://pub.scriptshit.de/PoliKnister-1.zip) | [Watch the video](https://youtu.be/eRExuz3lhZw?list=PLyCfny1Hc_buWzQkBDlaIN9wo087wqdKp)
+				li 
+					:markdown
+						**KRASSVERB** - I patched some kind of weird reverb effect together. You can make pad sounds epic, wide, deep and dirty. Also it shows, Bitwig can do some nice reverb FX if you know how to chain. All default modules are pretty basic but chained together, they become very powerful.  
+						[Download KRASSVERB](http://pub.scriptshit.de/Bitwig_Chain_Poli-KrassVerb-ver1.zip) | [Watch the video](https://youtu.be/1xUSYoWJmd0?list=PLyCfny1Hc_buWzQkBDlaIN9wo087wqdKp)
+				li 
+					:markdown
+						**ULTIMATE KICK SNARE** - 2 Chains for your daily Drum & Bass, Dubstep, EDM studio life. Created entirely in and with Bitwig modules. No Samples involved. Nice Macros for fast tuning.  
+						[Download ULTIMATE KICK SNARE](http://pub.scriptshit.de/Polarity-Ultimate-Kick-Snare.zip) | [Watch the video](https://youtu.be/FTnh2qdjHEg?list=PLyCfny1Hc_buWzQkBDlaIN9wo087wqdKp)
+
+			hr
+			h2 Bitwig Project Share
+			p 
+				:markdown
+					Yes i do even share complete projects with you. Use it for learning, inspirations or getting used to Bitwig. [Watch the Youtube Playlist](https://www.youtube.com/playlist?list=PLyCfny1Hc_bvFLYu-4vsv-W30EPXHrCkU)
+			ul
+				li 
+					:markdown
+						**Super Pad** - Not really a project but a preset with a pattern. U can use this project for your own creations. Have fun and keep experimenting with Bitwig!  
+						Mp3 [320kbps](https://polaritymusic.s3.amazonaws.com/Polarity_-_SuperPad.mp3) [64kbs](https://polaritymusic.s3.amazonaws.com/Polarity_-_SuperPad-small.mp3) | [Download Project](https://polaritymusic.s3.amazonaws.com/Polarity-Superpad-Bitwig-Project.zip) | [Watch the video](https://youtu.be/DELLm-Nb2aE?list=PLyCfny1Hc_bvFLYu-4vsv-W30EPXHrCkU)
+				li 
+					:markdown
+						**Clueless Liquid** - New Project for you to download (check description below) and learn new stuff about Bitwig. It´s again a random noise generated Ambient / Chillout / Drone style Track. You can use the Instrument and the project for your own enjoyment and to what you want with it.  
+						Mp3 [320kbps](http://polaritymusic.s3.amazonaws.com/CluelessLiquid-2.mp3) [64kbs](http://polaritymusic.s3.amazonaws.com/CluelessLiquid-2-small.mp3) | [Download Project](http://polaritymusic.s3.amazonaws.com/Polarity-CluelessLiquid-Bitwig-Project.zip) | [Watch the video](https://youtu.be/5TEPXINX_Sw?list=PLyCfny1Hc_bvFLYu-4vsv-W30EPXHrCkU)
+
+
+		footer
+			p.small Robert Agthe, Matternstraße 14, 10249 Berlin
