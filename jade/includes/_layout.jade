@@ -1,6 +1,7 @@
 include header
 include mixin_download
 include navigation
+include donate
 
 html
 	head
@@ -9,6 +10,7 @@ html
 	body
 		block body
 
+		+donate()
 		footer
 			p.small 
 				| Robert Agthe, Matternstraße 14, 10249 Berlin ~ 
