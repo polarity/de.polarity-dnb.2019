@@ -15,12 +15,16 @@ body {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
-	background-color: #efefef;
+	background-color: #D1D1D1;
 	margin: 0;
 	min-height: 100%;
 	position: relative;
-	padding-bottom: 6em;
-	padding-top: 3em;
+	padding-bottom: 3em;
+}
+@media all and (min-width: 600px) {
+	body {
+		padding-top: 3em;
+	}
 }
 code {
 	font-size: 0.8em;
