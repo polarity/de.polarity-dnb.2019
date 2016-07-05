@@ -21,7 +21,7 @@ body {
 	position: relative;
 	padding-bottom: 3em;
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 735px) {
 	body {
 		padding-top: 3em;
 	}
