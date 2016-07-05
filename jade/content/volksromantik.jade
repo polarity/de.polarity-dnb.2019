@@ -21,10 +21,12 @@ block head
 	<meta name="twitter:image:src" content="http://polarity-dnb.de/medien-volksromantik/Volksromantik-Cover-Facebook4.jpg">
 
 	style.
-		body {
-			background-image: url("medien-volksromantik/Volksromantik-Hintergrund.jpg");
-			background-size: cover;
-			background-attachment: fixed;
+		@media all and (min-width: 600px) {
+			body {
+				background-image: url("medien-volksromantik/Volksromantik-Hintergrund.jpg");
+				background-size: cover;
+				background-attachment: fixed;
+			}
 		}
 		p img {
 			max-width: 100%;

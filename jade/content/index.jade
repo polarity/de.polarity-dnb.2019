@@ -5,10 +5,12 @@ block head
 	+Header({title: 'Polarity Music - deep electronic music from berlin', base:""})
 
 	style.
-		body {
-			background-image: url(medien-index/bg-polarity-3.jpg);
-			background-size: cover;
-			background-attachment: fixed;
+		@media all and (min-width: 600px) {
+			body {
+				background-image: url(medien-index/bg-polarity-3.jpg);
+				background-size: cover;
+				background-attachment: fixed;
+			}
 		}
 		.content-block {
 			background-color: rgba(255, 255, 255, 0.9);
