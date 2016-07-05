@@ -19,7 +19,6 @@ body {
 	margin: 0;
 	min-height: 100%;
 	position: relative;
-	padding-bottom: 3em;
 }
 @media all and (min-width: 735px) {
 	body {
@@ -66,8 +65,7 @@ a:hover {
 footer {
 	line-height: 0;
 	padding: 1em;
-	margin-top: 1em;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	bottom: 0;
 	margin-bottom: 0;
@@ -76,12 +74,22 @@ footer {
 footer p {
 	margin: 0;
 }
+@media all and (min-width: 735px) {
+	footer {
+		margin-top: 1em;
+
+	}
+}
 .content-block {
-	padding: 3%;
 	background-color: rgba(255, 255, 255, 0.6);
 	max-width: 740px;
+	padding: 3%;
 	margin: auto;
-	margin-bottom: 100px;
+}
+@media all and (min-width: 735px) {
+	.content-block {
+		margin-bottom: 100px;
+	}
 }
 #waveform {
 	margin-top: 1.5em;
