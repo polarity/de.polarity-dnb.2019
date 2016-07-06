@@ -76,8 +76,8 @@ footer p {
 }
 @media all and (min-width: 735px) {
 	footer {
+		position: absolute;
 		margin-top: 1em;
-
 	}
 }
 .content-block {

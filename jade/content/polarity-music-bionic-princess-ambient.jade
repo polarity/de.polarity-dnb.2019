@@ -1,7 +1,18 @@
 extends ../includes/_layout
 
 block head
-	+Header({title: 'Polarity - Bionic Princess Ambient', base:""})
+	- var mp3Link = "https://polaritymusic.s3.amazonaws.com/BionicPrincess-1"
+	- var mp3Date = "2016-05-22"
+	- var mp3Version = "1"
+	- var mp3Artist = "Polarity"
+	- var mp3Title = "Bionic Princess"
+	- var mp3Genre = "Ambient"
+	- var mp3Desc = "Just created a small random ambient track. It´s pretty random. The chords looping the whole time but filters, fx and additional synths and samples are randomized. took me 20min, so pretty raw. njoy!"
+	- var mp3Search = mp3Artist+" "+mp3Title
+	- var mp3Pic = "bionic-princess.jpg"
+	- var siteTitle = 'Polarity - '+mp3Title+" "+mp3Genre
+	+Header({title: siteTitle, base:""})
+
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js")
 
 	script()
@@ -11,18 +22,38 @@ block head
 				waveColor: '#A8A59E',
 				progressColor: '#4F3F3D'
 			});
-			wavesurfer.load('https://polaritymusic.s3.amazonaws.com/BionicPrincess-1.mp3');
+			wavesurfer.load('#{mp3Link}-small.mp3');
 
+			wavesurfer.on('loading', function(status){
+				var loadingBar = document.querySelector(".loading");
+				loadingBar.style.width = status+"%"
+				
+			});
+			wavesurfer.on("ready", function(){
+				var loadingBar = document.querySelector(".loading");
+				loadingBar.remove();
+			});
 			play = function(){
 				wavesurfer.playPause();
 			}
 		}
 
 	style.
-		body {
-			background-image: url(medien-index/bionic-princess.jpg);
-			background-size: cover;
-			background-attachment: fixed;
+		#waveform {
+			position: relative;
+		}
+		#waveform .loading {
+			background-color: #A8A59E;
+			height: 128px;
+			position: absolute;
+			text-align: center;
+		}
+		@media all and (min-width: 735px) {
+			body {
+				background-image: url(medien-index/#{mp3Pic});
+				background-size: cover;
+				background-attachment: fixed;
+			}
 		}
 		.content-block {
 			background-color: rgba(255, 255, 255, 0.9);
@@ -30,14 +61,30 @@ block head
 
 block body
 	div.content-block 
-		h1 Bionic Princess
+		h1 #{mp3Title}
+		p.info Creation date: #{mp3Date}
 		p.intro Far away in a strange galaxy, lives the Bionic Princess
-		p Just created a small random ambient track. It´s pretty random. The chords looping the whole time but filters, fx and additional synths and samples are randomized. took me 20min, so pretty raw. njoy!
+		p #{mp3Desc}
 		p
 			:markdown
-				License: [CC licence](https://creativecommons.org/licenses/by-sa/3.0/) 
+				License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 
 				DAW: [bitwig](http://bitwig.com) 
 				Image: [Robert Agthe](http://robert-agthe)
 
 		div#waveform
-		button(onclick="play()") play
+			div.loading 
+				p loading & processing mp3
+
+		button(onclick="play()") play/pause
+
+		h2 Downloads
+		p
+			:markdown
+				you can download the track(s) as mp3 files for free and under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license. Just give appropriate credit (mention "polarity" and/or link to this site), provide a link to the license, indicate if changes were made and you are good to go. All files are encoded with [lame](http://lame.sourceforge.net/). Link down? Drop me a message or search on [Archive.org](https://archive.org/details/@polarity-ger), [Soundcloud](https://soundcloud.com/search?q=#{mp3Search}) or [Youtube](https://www.youtube.com/results?search_query=#{mp3Search}).
+		ul
+			li 
+				:markdown
+					[320kps Mp3](#{mp3Link}.mp3) File for max listening pleaseure (big and nice)
+			li 
+				:markdown
+					[64kps Mp3](#{mp3Link}-small.mp3) File for mobile preview (small and dirty)

@@ -23,23 +23,42 @@
   waveColor: '#A8A59E',
   progressColor: '#4F3F3D'
  });
- wavesurfer.load('https://polaritymusic.s3.amazonaws.com/BionicPrincess-1.mp3');
+ wavesurfer.load('https://polaritymusic.s3.amazonaws.com/BionicPrincess-1-small.mp3');
  
+ wavesurfer.on('loading', function(status){
+  var loadingBar = document.querySelector(".loading");
+  loadingBar.style.width = status+"%"
+ });
+ wavesurfer.on("ready", function(){
+  var loadingBar = document.querySelector(".loading");
+  loadingBar.remove();
+ });
  play = function(){
   wavesurfer.playPause();
  }
 }
-</script><style>body {
- background-image: url(medien-index/bionic-princess.jpg);
- background-size: cover;
- background-attachment: fixed;
+</script><style>#waveform {
+ position: relative;
+}
+#waveform .loading {
+ background-color: #A8A59E;
+ height: 128px;
+ position: absolute;
+ text-align: center;
+}
+@media all and (min-width: 735px) {
+ body {
+  background-image: url(medien-index/bionic-princess.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+ }
 }
 .content-block {
  background-color: rgba(255, 255, 255, 0.9);
 }
-</style></head><body><div class="content-block"> <h1>Bionic Princess</h1><p class="intro">Far away in a strange galaxy, lives the Bionic Princess</p><p>Just created a small random ambient track. It´s pretty random. The chords looping the whole time but filters, fx and additional synths and samples are randomized. took me 20min, so pretty raw. njoy!</p><p><p>License: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC licence</a> 
+</style></head><body><div class="content-block"> <h1>Bionic Princess</h1><p class="info">Creation date: 2016-05-22</p><p class="intro">Far away in a strange galaxy, lives the Bionic Princess</p><p>Just created a small random ambient track. It´s pretty random. The chords looping the whole time but filters, fx and additional synths and samples are randomized. took me 20min, so pretty raw. njoy!</p><p><p>License: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> 
 DAW: <a href="http://bitwig.com">bitwig</a> 
-Image: <a href="http://robert-agthe">Robert Agthe</a></p></p><div id="waveform"></div><button onclick="play()">play</button></div><style>.donations {
+Image: <a href="http://robert-agthe">Robert Agthe</a></p></p><div id="waveform"><div class="loading"> <p>loading & processing mp3</p></div></div><button onclick="play()">play/pause</button><h2>Downloads</h2><p><p>you can download the track(s) as mp3 files for free and under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. Just give appropriate credit (mention &quot;polarity&quot; and/or link to this site), provide a link to the license, indicate if changes were made and you are good to go. All files are encoded with <a href="http://lame.sourceforge.net/">lame</a>. Link down? Drop me a message or search on <a href="https://archive.org/details/@polarity-ger">Archive.org</a>, <a href="https://soundcloud.com/search?q=Polarity Bionic Princess">Soundcloud</a> or <a href="https://www.youtube.com/results?search_query=Polarity Bionic Princess">Youtube</a>.</p></p><ul><li> <p><a href="https://polaritymusic.s3.amazonaws.com/BionicPrincess-1.mp3">320kps Mp3</a> File for max listening pleaseure (big and nice)</p></li><li> <p><a href="https://polaritymusic.s3.amazonaws.com/BionicPrincess-1-small.mp3">64kps Mp3</a> File for mobile preview (small and dirty)</p></li></ul></div><style>.donations {
  background-color: rgb(255, 198, 0);
  padding: 20px;
  width: 100%;
