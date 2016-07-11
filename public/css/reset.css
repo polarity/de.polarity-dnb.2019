@@ -62,6 +62,9 @@ a:visited {
 a:hover {
 	color: darkblue;
 }
+p img {
+	max-width: 100%;
+}
 footer {
 	line-height: 0;
 	padding: 1em;
