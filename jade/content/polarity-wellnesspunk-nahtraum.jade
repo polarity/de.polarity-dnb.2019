@@ -1,0 +1,92 @@
+extends ../includes/_layout
+
+block head
+	- var mp3Link = "https://polaritymusic.s3.amazonaws.com/Nahtraum-3"
+	- var mp3Date = "2016-08-18"
+	- var mp3Version = "3"
+	- var mp3Artist = "Polarity & Wellnesspunk"
+	- var mp3Title = "Nahtraum"
+	- var mp3Genre = "Ambient"
+	- var mp3intro = "Sometimes dreams are reality"
+	- var mp3Desc = "Some chords by wellnesspunk completed with drums and bass by polarity. Business as usual: Hip Hop Chill-Out Ambient Electronica."
+	- var mp3Search = mp3Artist+" "+mp3Title
+	- var mp3Pic = "Nahtraum.jpg"
+	- var siteTitle = mp3Artist+' - '+mp3Title+" "+mp3Genre
+	+Header({title: siteTitle, base:""})
+
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js")
+
+	script()
+		window.onload = function(){
+			var wavesurfer = WaveSurfer.create({
+				container: '#waveform',
+				waveColor: '#A8A59E',
+				progressColor: '#4F3F3D'
+			});
+			wavesurfer.load('#{mp3Link}.mp3');
+
+			wavesurfer.on('loading', function(status){
+				var loadingBar = document.querySelector(".loading");
+				loadingBar.style.width = status+"%"
+				
+			});
+			wavesurfer.on("ready", function(){
+				var loadingBar = document.querySelector(".loading");
+				loadingBar.remove();
+			});
+			play = function(){
+				wavesurfer.playPause();
+			}
+		}
+
+	style.
+		#waveform {
+			position: relative;
+		}
+		#waveform .loading {
+			background-color: #A8A59E;
+			height: 128px;
+			position: absolute;
+			text-align: center;
+		}
+		@media all and (min-width: 735px) {
+			body {
+				background-image: url(medien-index/#{mp3Pic});
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		}
+		.content-block {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+block body
+	div.content-block
+		+nav()
+		h1 #{mp3Title}
+		p.info by #{mp3Artist} | Creation date: #{mp3Date}
+		p.intro #{mp3intro}
+		p #{mp3Desc}
+		p
+			:markdown
+				License: [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) 
+				DAW: [bitwig](http://bitwig.com) 
+				Image: [Robert Agthe](http://robert-agthe)
+
+		div#waveform
+			div.loading 
+				p loading & processing mp3
+
+		button(onclick="play()") play/pause
+
+		h2 Downloads
+		p
+			:markdown
+				you can download the track(s) as mp3 files for free and under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license. Just give appropriate credit (mention "polarity" and/or link to this site), provide a link to the license, indicate if changes were made and you are good to go. All files are encoded with [lame](http://lame.sourceforge.net/). Link down? Drop me a message or search on [Archive.org](https://archive.org/details/@polarity-ger), [Soundcloud](https://soundcloud.com/search?q=#{mp3Search}) or [Youtube](https://www.youtube.com/results?search_query=#{mp3Search}).
+		ul
+			li 
+				:markdown
+					[320kps Mp3](#{mp3Link}.mp3) File for max listening pleaseure (big and nice)
+			li 
+				:markdown
+					[64kps Mp3](#{mp3Link}-small.mp3) File for mobile preview (small and dirty)

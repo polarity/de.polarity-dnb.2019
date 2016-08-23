@@ -1,0 +1,80 @@
+<html><head><meta content="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><meta content="de-DE" http-equiv="Content-Language"/><!-- favicons--><link rel="icon" type="image/ico" href="favico/favicon.ico"/><link rel="apple-touch-icon-precomposed" sizes="57x57" href="favico/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favico/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favico/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favico/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="favico/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favico/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="favico/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favico/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="favico/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="favico/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="favico/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="favico/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="favico/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="favico/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="favico/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="favico/mstile-310x310.png" /><!-- styles--><link rel="stylesheet" type="text/css" href="css/reset.css"/><title>Polarity & Wellnesspunk - Nahtraum Ambient</title><script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js"></script><script>window.onload = function(){
+ var wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: '#A8A59E',
+  progressColor: '#4F3F3D'
+ });
+ wavesurfer.load('https://polaritymusic.s3.amazonaws.com/Nahtraum-3.mp3');
+ 
+ wavesurfer.on('loading', function(status){
+  var loadingBar = document.querySelector(".loading");
+  loadingBar.style.width = status+"%"
+ });
+ wavesurfer.on("ready", function(){
+  var loadingBar = document.querySelector(".loading");
+  loadingBar.remove();
+ });
+ play = function(){
+  wavesurfer.playPause();
+ }
+}
+</script><style>#waveform {
+ position: relative;
+}
+#waveform .loading {
+ background-color: #A8A59E;
+ height: 128px;
+ position: absolute;
+ text-align: center;
+}
+@media all and (min-width: 735px) {
+ body {
+  background-image: url(medien-index/Nahtraum.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+ }
+}
+.content-block {
+ background-color: rgba(255, 255, 255, 0.9);
+}
+</style></head><body><div class="content-block"><nav>	<a href="index.html" title="polarity music">← back to polarity music</a></nav><h1>Nahtraum</h1><p class="info">by Polarity &amp; Wellnesspunk | Creation date: 2016-08-18</p><p class="intro">Sometimes dreams are reality</p><p>Some chords by wellnesspunk completed with drums and bass by polarity. Business as usual: Hip Hop Chill-Out Ambient Electronica.</p><p><p>License: <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> 
+DAW: <a href="http://bitwig.com">bitwig</a> 
+Image: <a href="http://robert-agthe">Robert Agthe</a></p></p><div id="waveform"><div class="loading"> <p>loading & processing mp3</p></div></div><button onclick="play()">play/pause</button><h2>Downloads</h2><p><p>you can download the track(s) as mp3 files for free and under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license. Just give appropriate credit (mention &quot;polarity&quot; and/or link to this site), provide a link to the license, indicate if changes were made and you are good to go. All files are encoded with <a href="http://lame.sourceforge.net/">lame</a>. Link down? Drop me a message or search on <a href="https://archive.org/details/@polarity-ger">Archive.org</a>, <a href="https://soundcloud.com/search?q=Polarity &amp; Wellnesspunk Nahtraum">Soundcloud</a> or <a href="https://www.youtube.com/results?search_query=Polarity &amp; Wellnesspunk Nahtraum">Youtube</a>.</p></p><ul><li> <p><a href="https://polaritymusic.s3.amazonaws.com/Nahtraum-3.mp3">320kps Mp3</a> File for max listening pleaseure (big and nice)</p></li><li> <p><a href="https://polaritymusic.s3.amazonaws.com/Nahtraum-3-small.mp3">64kps Mp3</a> File for mobile preview (small and dirty)</p></li></ul></div><style>.donations {
+ background-color: rgb(255, 198, 0);
+ padding: 20px;
+ width: 100%;
+ right: 0;
+ text-align: center;
+ margin-bottom: 0;
+}
+
+@media all and (min-width: 735px) {
+ .donations {
+  width: auto;
+  position: fixed;
+  bottom: 83px;
+  right: 4%;
+ }
+}
+</style><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="donations"><input type="hidden" name="cmd" value="_s-xclick"/><input type="hidden" name="hosted_button_id" value="G4H7KJWTT7T5N"/><input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!"/><img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1"/></form><footer><p class="small"> 
+Robert Agthe, Matternstraße 14, 10249 Berlin ~ 
+found typo? error? <a href="https://github.com/polarity/polarity-music">file an issue on github</a> </p></footer></body></html>
