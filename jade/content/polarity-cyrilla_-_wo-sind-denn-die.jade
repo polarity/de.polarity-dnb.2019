@@ -1,7 +1,7 @@
 extends ../includes/_layout
 
 block head
-	- var mp3Link = "https://polaritymusic.s3.amazonaws.com/Polarity-Cyrilla_-_WoSindDennDie-9"
+	- var mp3Links = [{title: "Wo sind denn die", file: "https://polaritymusic.s3.amazonaws.com/Polarity-Cyrilla_-_WoSindDennDie-9"},{title: "nochmal nur anders!", file: "https://polaritymusic.s3.amazonaws.com/Polarity-Cyrilla_-_WoSindDennDie-9"}]
 	- var mp3Date = "2016-08-05"
 	- var mp3Version = "1"
 	- var mp3Artist = "Polarity & Cyrilla"
@@ -23,7 +23,6 @@ block head
 				waveColor: '#A8A59E',
 				progressColor: '#4F3F3D'
 			});
-			wavesurfer.load('#{mp3Link}-small.mp3');
 
 			wavesurfer.on('loading', function(status){
 				var loadingBar = document.querySelector(".loading");
@@ -77,6 +76,13 @@ block body
 			div.loading 
 				p loading & processing mp3
 
+		div#playlist
+			ul
+			- each file in mp3Links
+				li
+					a(href!=file.file+'.mp3') #{file.title}
+
+
 		button(onclick="play()") play/pause
 
 		h2 Downloads
@@ -84,9 +90,10 @@ block body
 			:markdown
 				you can download the track(s) as mp3 files for free and under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license. Just give appropriate credit (mention "polarity" and/or link to this site), provide a link to the license, indicate if changes were made and you are good to go. All files are encoded with [lame](http://lame.sourceforge.net/). Link down? Drop me a message or search on [Archive.org](https://archive.org/details/@polarity-ger), [Soundcloud](https://soundcloud.com/search?q=#{mp3Search}) or [Youtube](https://www.youtube.com/results?search_query=#{mp3Search}).
 		ul
-			li 
-				:markdown
-					[320kps Mp3](#{mp3Link}.mp3) File for max listening pleaseure (big and nice)
-			li 
-				:markdown
-					[64kps Mp3](#{mp3Link}-small.mp3) File for mobile preview (small and dirty)
+			- each file in mp3Links
+				li 
+					:markdown
+						[320kps Mp3](#{file.file}.mp3) File for max listening pleaseure (big and nice)
+				li 
+					:markdown
+						[64kps Mp3](#{file.file}-small.mp3) File for mobile preview (small and dirty)
