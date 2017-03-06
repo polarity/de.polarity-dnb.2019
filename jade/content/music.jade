@@ -1,0 +1,72 @@
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Music by Polarity', base:""})
+
+	// facebook
+	<meta property="og:title" content="Polarity Bitwig Tools">
+	<meta property="og:site_name" content="Polarity Music">
+	<meta property="og:url" content="http://polarity-dnb.de/bitwig.html">
+	<meta property="og:description" content="Free tools, devices, presets and complete projects for Bitwig by Polarity Berlin.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://polarity-dnb.de/medien-index/sc-bitwig.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="675">
+
+	style.
+		.music-cover-list {
+			display: flex;
+		}
+		.music-cover-list:last-of-type {
+			margin-bottom: 100px;
+		}
+		.music-cover-list .music-cover {
+			background-size: cover;
+			margin: 5px;
+			width: 33%;
+			position: relative;
+			overflow: hidden;
+		}
+		.music-cover-list .music-cover:before {
+			content: "";
+			display: block;
+			padding-top: 100%; /* initial ratio of 1:1*/
+		}
+		.music-cover-list .music-cover .music-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: white;
+			display: none;
+		}
+
+block body
+	div.content-block 
+		h1 All Polarity Music
+		p This is the meat. You can listen to all my creations on here, which is fantastic. I try to make the player as best as possibile. Keep hitting me with feedback!
+
+	div.music-cover-list
+		section.music-cover(style="background-image: url(medien-index/cover-PNRLP0005.jpg);")
+			.music-content
+				h2 polarity - syntax
+
+		section.music-cover(style="background-image: url(medien-index/Cover-Delete-All-Your-Social-Network-Accounts.jpg);")
+			.music-content
+				h2 polarity - delete all your social network accounts
+
+		section.music-cover(style="background-image: url(medien-index/Cover-Monokultur.jpg);")
+			.music-content
+				h2 polarity - monokultur
+
+	div.music-cover-list
+		section.music-cover(style="background-image: url(medien-volksromantik/Volksromantik-Cover-Klein.jpg);")
+			.music-content
+				h2 polarity - syntax
+
+		section.music-cover(style="background-image: url(medien-index/Cover-TilShakeheadAll.jpg);")
+			.music-content
+				h2 polarity - syntax
+
+		section.music-cover(style="background-image: url(medien-index/cover-Rund.jpg);")
+			.music-content
+				h2 polarity - syntax
