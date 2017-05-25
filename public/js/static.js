@@ -39,11 +39,11 @@ window.onload = function () {
     mp3Player.playFile()
   })
 
-  mp3Player.wavesurfer.on('audioprocess', function(){
+  mp3Player.wavesurfer.on('audioprocess', function () {
     $('.duration').text(
-       (mp3Player.wavesurfer.getDuration()/60).toFixed(2).replace('.', ':'))
+      (mp3Player.wavesurfer.getDuration() / 60).toFixed(2).replace('.', ':'))
     $('.position').text(
-      (mp3Player.wavesurfer.getCurrentTime()/60).toFixed(2).replace('.', ':')
+      (mp3Player.wavesurfer.getCurrentTime() / 60).toFixed(2).replace('.', ':')
     )
   })
   mp3Player.wavesurfer.on('finish', function () {
@@ -75,11 +75,11 @@ window.onload = function () {
 
   var createPlaylist = function () {
     $.each(mp3Player.list, function (key, mp3) {
-      var feat = ""
-      if(mp3.feat) {
-        feat = " (feat.: "+mp3.feat+")"
+      var feat = ''
+      if (mp3.feat) {
+        feat = ' (feat.: ' + mp3.feat + ')'
       }
-      var listEl = $('<li><a onclick="mp3Player.goToIndex(' + key + ')">' + (key+1) + ' ' + mp3.artist + ' - ' + mp3.title + feat+'</a></li>')
+      var listEl = $('<li><a onclick="mp3Player.goToIndex(' + key + ')">' + (key + 1) + ' ' + mp3.artist + ' - ' + mp3.title + feat + '</a></li>')
       $('.track_list').append(listEl)
     })
   }
