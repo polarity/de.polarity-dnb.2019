@@ -25,6 +25,8 @@ window.onload = function () {
   })
 
   mp3Player.wavesurfer.on('loading', function (status) {
+    $('.duration').text('--')
+    $('.position').text('--')
     var loadingBar = document.querySelector('.loading')
     loadingBar.style.display = 'block'
     var progressbar = document.querySelector('.progressbar')
@@ -37,6 +39,13 @@ window.onload = function () {
     mp3Player.playFile()
   })
 
+  mp3Player.wavesurfer.on('audioprocess', function(){
+    $('.duration').text(
+       (mp3Player.wavesurfer.getDuration()/60).toFixed(2).replace('.', ':'))
+    $('.position').text(
+      (mp3Player.wavesurfer.getCurrentTime()/60).toFixed(2).replace('.', ':')
+    )
+  })
   mp3Player.wavesurfer.on('finish', function () {
     mp3Player.next()
     mp3Player.load(mp3Player.list[mp3Player.index])
