@@ -67,11 +67,12 @@ p img {
 }
 footer {
 	line-height: 0;
-	padding: 1em;
+	padding: 2px;
 	width: 100%;
 	bottom: 0;
 	margin-bottom: 0;
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0.85);
+	position: absolute;
 }
 footer p {
 	margin: 0;

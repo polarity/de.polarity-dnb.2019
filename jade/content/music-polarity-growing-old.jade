@@ -1,0 +1,76 @@
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Polarity Album: Growing Old - 2017', base:""})
+
+	// facebook
+	<meta property="og:title" content="Polarity Bitwig Tools">
+	<meta property="og:site_name" content="Polarity Music">
+	<meta property="og:url" content="http://polarity-dnb.de/bitwig.html">
+	<meta property="og:description" content="Free tools, devices, presets and complete projects for Bitwig by Polarity Berlin.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://polarity-dnb.de/medien-index/sc-bitwig.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="675">
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.0.52/wavesurfer.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="js/static.js")
+
+	style.
+		body {
+			background-image: url(https://polaritymusic.s3.amazonaws.com/album/growing-old/Polarity_growing_old_cover_small.jpg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #121617;
+		}
+		ul.track_list li a {
+			cursor: pointer;
+		}
+		.mp3player-playpause-button {
+			display: inline-block;
+			outline: 1px solid #fff;
+			cursor: pointer;
+			padding: 2px 15px;
+			background-color: #939386;
+		}
+		#waveform {
+			position: relative;
+		}
+		#waveform .loading {
+			display: flex;
+			flex-direction: column;
+			z-index: 5;
+		}
+		#waveform .loading .progressbar{
+			background-color: #939386;
+			height: 128px;
+			width: 0;
+			position: absolute;
+			top: 0;
+			text-align: center;
+			overflow: hidden;
+		}
+		#waveform .loading .info {
+			top: 0;
+			position: absolute;
+			width: 100%;
+			text-align: center;
+		}
+
+block body
+	div.content-block
+		+nav()
+		h1 Growing Old
+		p Music is culture. Everyone should have free access to culture and build upon it. Like i build upon my influences. Thats how it should be, thats what i believe in. Sure you have to make money for a living, but thats another part of your live and shouldn´t be connected with your creative output. I do code for a living and make music for free.
+
+		div(id="mp3player")
+			div.mp3player-playpause-button(onclick="mp3Player.playFile();") &#9656; play / pause
+
+			div#waveform
+				div.loading
+					div.progressbar
+					div.info
+						p loading & processing mp3
+
+			ul.track_list
