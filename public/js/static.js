@@ -21,7 +21,8 @@ window.onload = function () {
   mp3Player.wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: '#939386',
-    progressColor: '#556f49'
+    progressColor: '#556f49',
+    backend: 'MediaElement'
   })
 
   mp3Player.wavesurfer.on('loading', function (status) {
