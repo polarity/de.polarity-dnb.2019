@@ -41,32 +41,37 @@ block head
 		}
 
 block body
-	div.content-block 
+	div.content-block
+		+nav()
 		h1 All Polarity Music
-		p This is the meat. You can listen to all my creations on here, which is fantastic. I try to make the player as best as possibile. Keep hitting me with feedback!
+		p Currently there are only cover pictures of my albums or publications. However, a small streaming service for the browser is planned.
+		p 
+			:markdown
+				With a little bit of support on **[Patreon](https://www.patreon.com/polarity_music)** or **[paypal](https://paypal.me/polaritymusic)**, I would be fine.
+		p 
+			:markdown
+				Best places to listen are [Youtube](https://www.youtube.com/user/polaritydnb/) and [Spotify](https://open.spotify.com/artist/2ri4hzNaXNZc5RWAUcPXSx).
+				Best places to buy is [Bandcamp](https://polarity.bandcamp.com/).
 
 	div.music-cover-list
-		section.music-cover(style="background-image: url(medien-index/cover-PNRLP0005.jpg);")
+		a.music-cover(href="https://polarity.bandcamp.com/album/growing-old", style="background-image: url(medien-index/cover-growing-old.jpg);")
+			.music-content
+				h2 polarity - growing old
+
+		a.music-cover(href="https://polarity.bandcamp.com/album/syntax", style="background-image: url(medien-index/cover-PNRLP0005.jpg);")
 			.music-content
 				h2 polarity - syntax
 
-		section.music-cover(style="background-image: url(medien-index/Cover-Delete-All-Your-Social-Network-Accounts.jpg);")
+		a.music-cover(href="https://polarity.bandcamp.com/album/delete-all-your-social-network-accounts", style="background-image: url(medien-index/Cover-Delete-All-Your-Social-Network-Accounts.jpg);")
 			.music-content
 				h2 polarity - delete all your social network accounts
 
-		section.music-cover(style="background-image: url(medien-index/Cover-Monokultur.jpg);")
+
+	div.music-cover-list
+		a.music-cover(href="https://polarity.bandcamp.com/album/monokultur", style="background-image: url(medien-index/Cover-Monokultur.jpg);")
 			.music-content
 				h2 polarity - monokultur
 
-	div.music-cover-list
-		section.music-cover(style="background-image: url(medien-volksromantik/Volksromantik-Cover-Klein.jpg);")
+		a.music-cover(href="https://polarity.bandcamp.com/album/volksromantik", style="background-image: url(medien-volksromantik/Volksromantik-Cover-Klein.jpg);")
 			.music-content
-				h2 polarity - syntax
-
-		section.music-cover(style="background-image: url(medien-index/Cover-TilShakeheadAll.jpg);")
-			.music-content
-				h2 polarity - syntax
-
-		section.music-cover(style="background-image: url(medien-index/cover-Rund.jpg);")
-			.music-content
-				h2 polarity - syntax
+				h2 polarity - Volksromantik
