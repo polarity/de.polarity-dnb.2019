@@ -53,6 +53,9 @@ p.small {
 ul {
 	margin-left: 1em;
 }
+ul li {
+	margin-bottom: 1em; 
+}
 a:link{
 	color: #001B8D;
 }
