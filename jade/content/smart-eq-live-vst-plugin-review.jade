@@ -1,0 +1,91 @@
+
+extends ../includes/_layout
+
+block head
+	+Header({title: 'Polarity Music - deep electronic music from berlin', base:""})
+
+	// all
+	<meta property="og:site_name" content="Polarity Music">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:type" content="article">
+	<meta name="twitter:site" content="polarity">
+	<meta name="twitter:card" content="summary_large_image">
+
+	// facebook
+	<meta property="og:title" content="Sonible Smart:EQ Live VST Review">
+	<meta property="og:url" content="http://polarity-dnb.de/smart-eq-live-vst-plugin-review.html">
+	<meta property="og:description" content="Hello folks, today I wanted to talk to you about Smart EQ Live from sonible. The plugin is relatively new and was released in December last year.">
+	<meta property="og:image" content="http://polarity-dnb.de/medien-index/smarteqlive-fb.jpg">
+
+	// twitter
+	<meta name="twitter:title" content="Sonible Smart:EQ Live VST Review">
+	<meta name="twitter:image:src" content="http://polarity-dnb.de/medien-index/smarteqlive-fb.jpg">
+	<meta name="twitter:description" content="Hello folks, today I wanted to talk to you about Smart EQ Live from sonible. The plugin is relatively new and was released in December last year.">
+
+	style.
+		@media all and (min-width: 735px) {
+			body {
+				background-image: url(medien-index/bg-smarteqlive.png);
+				background-size: cover;
+				background-attachment: fixed;
+			}
+		}
+		.content-block {
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+block body
+	div.content-block
+		+nav()
+		h1 Review: Smart EQ Live VST Plugin - Balance your mix artifically?
+		p.intro Hello folks, today I wanted to talk to you about "Smart EQ Live" from "sonible". The plugin is relatively new and was released in December last year. 
+		p 
+			b
+				| Support me on 
+				i(class="fab fab fa-patreon")
+				| 
+				a(href='https://www.patreon.com/polarity_music') Patreon
+				| 
+				| or on 
+				i(class="fab fab fa-paypal") 
+				| 
+				a(href='https://paypal.me/polaritymusic') paypal
+
+		<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/lKtvzOMgl18" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+		p 
+			:markdown
+				## Why?
+				The special thing about this equalizer is that it thinks for you or attempts to take work off your hands. According to the product description, the plug-in analyzes audio signals and tries to "optimize" them in real time. Perfect for live use. And because I personally go more and more towards live performance in my daily production life and sooner or later you come across the problem that sounds develop unexpectedly or are even generated completely randomly. In such an environment, static EQ settings are of course not really helpful and automation doesn't really get you far.
+
+				For me, an equalizer has two goals. First of all, remove distracting frequencies to get a neutral frequency picture without removing too much character and secondly, of course, as a creative tool for sound design where I force a different character on sounds. Of course, I like to have the former taken out of my hands by an automated tool, the latter I would like to continue to decide for myself in the future. 
+
+				I have to be honest with you, I've been looking for a tool like this for a long time. Of course, I already know several equalizers that have a "Matching" function where I can transfer frequency curves from one signal to another, but all these Macthing EQs are static. And because we often encounter situations in live performances where we don't know how our audio signal develops over time, these tools are simply out of the question.
+
+				## Smart EQ Live
+				Once you have loaded the plugin on a track and opened it, you simply press the record button. The audio signal is analyzed immediately and, if the "auto stop" function is active, the processing is stopped after a certain time. 
+
+				The red curve can be used to define how much the EQ changes the signal and how large the affected frequency range is. If the curve is drawn downwards, the signal is processed inverted accordingly. 
+
+				With the limit knob you can prevent the equalizer from pushing frequencies too hard. 
+
+				With the two dividing lines you can tell the plugin where the bottom, midrange and top is and with the three values above how fast or slow the plugin reacts on incoming signals. 
+
+				The Threshold control determines the volume level at which the plug-in starts analyzing signals. 
+
+				Interesting are the two other tabs "profiles" and "snapshots" on the left. Snapshots are more or less "presets" and with Profiles you can teach the Smart EQ different frequency curves. 
+
+				Simply have the signal analyzed, correct the curve and save a new profile. Now you can always use your own profile to get the results you want.
+
+				## Summary
+				At the moment I am still trying and testing myself. Often the EQ delivers good results. With very dynamic material such as drums, you should not rely completely on it. However, the plugin can also be understood as a kind of "second opinion". All too often you get too used to the mixdown  and can't distinguish between good and evil. 
+
+				Here the plugin can push you out of the comfort zone or provide a quick second view on your own mixdown. Even if you dont like the results, you can still use it as an A/B tesing tool. I think the Plugin is heading with the concept in the right direction. We need more tools that get the dirty stuff out of the way so we have more time for creativity. If you want to try it for yourself, the plugin has a 30 days trial mode, so you can test it extensively.
+
+				That's it for me. If you know other plugins with similar features, please let me know in the comments. Many thanks also to my patreons who support the channel! Until next time, see you!
+
+				Plugin Website: [Sonible Smart EQ Live](https://www.sonible.com/de/smarteq-live/)
+
+				Watch my Video: [Smart EQ Live VST Plugin - Balance your mix by artifically? - Polarity Review](https://youtu.be/lKtvzOMgl18)
+
