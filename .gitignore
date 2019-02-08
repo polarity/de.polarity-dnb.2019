@@ -1,3 +1,4 @@
 *.zip
 *.html
 _gsdata_
+/node_modules

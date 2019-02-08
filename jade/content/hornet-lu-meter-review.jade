@@ -1,0 +1,86 @@
+
+extends ../includes/_layout
+
+block head
+  +Header({title: 'Auto Gain Hornet LU Meter VST Review - Polarity Music', base:""})
+
+  // all
+  <meta property="og:site_name" content="Polarity Music">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="article">
+  <meta name="twitter:site" content="polarity">
+  <meta name="twitter:card" content="summary_large_image">
+
+  // facebook
+  <meta property="og:title" content="Auto Gain Hornet LU Meter VST Review">
+  <meta property="og:url" content="http://polarity-dnb.de/hornet-lu-meter-review.html">
+  <meta property="og:description" content="Hello folks, today it’s about a plugin which which I have used very often lately.">
+  <meta property="og:image" content="http://polarity-dnb.de/medien-index/hornet-lu-meter-fb.jpg">
+
+  // twitter
+  <meta name="twitter:title" content="Auto Gain all the things - Hornet LU Meter Review">
+  <meta name="twitter:image:src" content="http://polarity-dnb.de/medien-index/hornet-lu-meter-fb.jpg">
+  <meta name="twitter:description" content="Hello folks, today it’s about a plugin which which I have used very often lately.">
+
+  style.
+    @media all and (min-width: 735px) {
+      body {
+        background-image: url(medien-index/bg-hornet-lu-meter.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+    }
+    .content-block {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+block body
+  div.content-block
+    +nav()
+    h1 Auto Gain all the things - Hornet LU Meter
+    p.intro Hello folks, today it’s about a plugin which which I have used very often lately. It's the "Hornet LU Meter".
+    p 
+      b
+        | Support me on 
+        i(class="fab fab fa-patreon")
+        | 
+        a(href='https://www.patreon.com/polarity_music') Patreon
+        | 
+        | or on 
+        i(class="fab fab fa-paypal") 
+        | 
+        a(href='https://paypal.me/polaritymusic') paypal
+
+    <div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/q4u1wI5fULw" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+    p
+      :markdown
+        Maybe you can remember when I talked about the K-20 system in one of my tutorials.
+
+        It was about the fact that I was leveling all my channels to -20 dB. But since this can be a very boring and time wasting process, I was looking for a easier solution. The Plugin can now do all that automatically for me.
+
+        The only thing I have to do is load it onto a track and start the transport. I now have to wait until the plugin has analyzed the input and can click stop. The channel is now levelled the to my reference value. Quite simple.
+
+        The reference value here is -23 LUFS, which is roughly equal to -20 dB RMS value. Since the plugin only consumes CPU time when measuring, it is quite resource-saving most of the time. If there is no measurement, the plugin is nothing more than a regular volume controller.
+
+        Although the plugin is very simple, it still has some functions to offer. For example, on the left side we have the Gain section where the main purpose is to adjust the volume. We have an option to set the measurement, an option to set an offset to the reference value and a "Max Peak" option to set how big our maximum volume peak can be. And of course a simple manual volume control.
+
+        On the right side we now have the setting for the reference value that we can freely choose and a selectable color for the analyzer.
+
+        In the middle we have the communication section where we can communicate with other instances of the plugin. If we select a group here and do the same in another instance, these two instances can now communicate with each other.
+
+        This is of course possible with more than two instances. You only have to add all plugins to the same group. 
+
+        With the two buttons "Gain" and "Meter" we can choose to send which values to exchange. only the left or the right section or both.
+        
+        Is everything in one group, we can alter values from one plugin window and send the changes to the remaining ones. If everything worked out, you should now have a balanced mixdown where you can add your own taste.
+
+        It is important to note that you have of course set each channel fader to 0db. This gives you the possibility to weight the channel strips individually according to your taste. The channel fader is now an offset to your reference value.
+
+        I can only recommend you to try out the plugin once. It costs very little money, it is very useful and you have a money back guarantee. Ok, that's all I have to say about this plugin. Thank you very much for watching this video and I would be happy about a thumbs up. If you have any questions, feel free to write them in the comments and I hope to see you again in the next video. Thank you and goodbye.
+
+        Plugin Website: [Hornet LU Meter](https://www.hornetplugins.com/plugins/hornet-lu-meter/)
+
+        Watch my Video: [Auto Gain all the things - Hornet LU Meter - Polarity Review](https://youtu.be/q4u1wI5fULw)
+

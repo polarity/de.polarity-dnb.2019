@@ -1,0 +1,101 @@
+extends ../includes/_layout
+
+block head
+  - var coverUrl = 'medien-index/cover-ambient-chillout-tales-i.jpg'
+  - var title = 'Ambient&nbsp;&amp;&nbsp;Chillout&nbsp;Tales&nbsp;I'
+
+  +Header({title: title + ' by Polarity', base:""})
+
+  // facebook
+  <meta property="og:title" content="Polarity - "+title>
+  <meta property="og:site_name" content="Polarity Music">
+  <meta property="og:url" content="http://polarity-dnb.de/music-ambient-chillout-tales-i.html">
+  <meta property="og:description" content="With a mixture of Drum &amp; Bass and Ambient 'Dunkel' brings you four new dark rythmic ambient tunes by polarity.">
+  <meta property="og:type" content="music">
+  <meta property="og:image" content="http://polarity-dnb.de/#{coverUrl}">
+
+  style.
+    body {
+      background-color: #000;
+    }
+    .music-cover-list {
+      display: flex;
+      justify-content: center;
+    }
+    .music-cover-list:last-of-type {
+      margin-bottom: 100px;
+    }
+    .music-cover-list .music-cover {
+      background-size: cover;
+      margin: 5px;
+      width: 100%;
+      max-width: 740px;
+      position: relative;
+      overflow: hidden;
+    }
+    .music-cover-list .music-cover:before {
+      content: "";
+      display: block;
+      padding-top: 100%; /* initial ratio of 1:1*/
+    }
+    .music-cover-list .music-cover .music-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      display: none;
+    }
+    .music-services {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .music-services a {
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 80px;
+      display: block;
+      text-indent: -999px;
+      overflow: hidden;
+      margin: 5px;
+    }
+    .music-services a:not([href]) {
+      opacity: 0.2;
+    }
+
+block body
+  div.music-cover-list
+    a.music-cover(href="https://polarity.bandcamp.com/album/ambient-chillout-tales-i", style="background-image: url("+coverUrl+");")
+      .music-content
+        h2 polarity - dunkel
+
+  div.content-block
+    nav	
+      a(href="music.html", title="polarity music") ← back to music
+
+    h1 #{title}
+    p Sometimes you need a break. Ambient &amp; Chillout Tales will tell stories for the space that surrounds us in several episodes. Part 1 of the series is packed with 10 tracks from polarity to drift away and relax.
+    p You can access the music via the following services:
+    div.music-services
+      a(href="https://polarity.bandcamp.com/album/ambient-chillout-tales-i", style="background-image: url(medien-index/services/bandcamp.png);") Bandcamp
+      a(href="https://open.spotify.com/album/0f4ruU90Sop7pJQHa8moNE", style="background-image: url(medien-index/services/spotify.png);") Spotify
+      a(href="http://www.tidal.com/album/93495295", style="background-image: url(medien-index/services/tidal.png);") Tidal
+      a(href="https://itunes.apple.com/us/album/dunkel-ep/1425646162?uo=4&app=apple+music", style="background-image: url(medien-index/services/applemusic.png);") Apple Music
+      a(href="https://itunes.apple.com/us/album/dunkel-ep/1425646162?uo=4&app=itunes", style="background-image: url(medien-index/services/itunes.png);") iTunes
+      a(href="http://www.amazon.com/gp/product/B07GD65VNV", style="background-image: url(medien-index/services/amazon.png);") Amazon
+      a(href="https://play.google.com/store/music/album/Polarity_Dunkel?id=Bpnqc5nivw7hpdwln7kcqiw6a7q", style="background-image: url(medien-index/services/google.png);") Google Play
+      a(href="https://www.deezer.com/album/70566452", style="background-image: url(medien-index/services/deezer.png);") Deezer
+      a(style="background-image: url(medien-index/services/beats.png);") Beats
+      a(style="background-image: url(medien-index/services/facebook.png);") Facebook
+      a(style="background-image: url(medien-index/services/anghami.png);") Anghami
+      a(style="background-image: url(medien-index/services/iheart.png);") iHeart
+      a(style="background-image: url(medien-index/services/imusica.png);") iMusica
+      a(style="background-image: url(medien-index/services/kkbox.png);") KKBox
+      a(style="background-image: url(medien-index/services/napster.png);") Napster
+      a(style="background-image: url(medien-index/services/rdio.png);") rdio
+      a(style="background-image: url(medien-index/services/saavn.png);") saavn
+    p or watch the 
+      a(href="https://www.youtube.com/watch?v=44WfcmIhgQY") teaser video on youtube
+
+  //script(type="text/javascript", src="js/bundle.js")

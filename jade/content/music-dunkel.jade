@@ -1,0 +1,110 @@
+extends ../includes/_layout
+
+block head
+  - var coverUrl = 'medien-index/cover-dunkel.jpg'
+  - var title = 'Dunkel EP'
+  - var artist = 'Polarity'
+  - var fullTitle = title+' by '+artist
+
+  +Header({title: fullTitle, base:""})
+
+  // facebook
+  meta(property="og:title", content=fullTitle)
+  <meta property="og:site_name" content="Polarity Music">
+  <meta property="og:url" content="http://polarity-dnb.de/music-dunkel.html">
+  <meta property="og:description" content="With a mixture of Drum &amp; Bass and Ambient 'Dunkel' brings you four new dark rythmic ambient tunes by polarity.">
+  <meta property="og:type" content="music">
+  <meta property="og:image" content="http://polarity-dnb.de/#{coverUrl}">
+
+  style.
+    body {
+      background-color: #000;
+    }
+    .music-cover-list {
+      display: flex;
+      justify-content: center;
+    }
+    .music-cover-list:last-of-type {
+      margin-bottom: 100px;
+    }
+    .music-cover-list .music-cover {
+      background-size: cover;
+      margin: 5px;
+      width: 100%;
+      max-width: 740px;
+      position: relative;
+      overflow: hidden;
+    }
+    .music-cover-list .music-cover:before {
+      content: "";
+      display: block;
+      padding-top: 100%; /* initial ratio of 1:1*/
+    }
+    .music-cover-list .music-cover .music-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: white;
+      display: none;
+    }
+    .music-services {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .music-services a {
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 80px;
+      display: block;
+      text-indent: -999px;
+      overflow: hidden;
+      margin: 5px;
+    }
+    .music-services a:not([href]) {
+      opacity: 0.2;
+    }
+
+block body
+  div.music-cover-list
+    a.music-cover(href="https://polarity.bandcamp.com/album/dunkel", title=fullTitle+' on Bandcamp', style="background-image: url("+coverUrl+");")
+      .music-content
+        h2 #{artist} - #{title}
+
+  div.content-block
+    nav	
+      a(href="music.html", title="polarity music") ← back to music
+
+    h1 Dunkel EP
+    p With a mixture of Drum &amp; Bass and Ambient "Dunkel" brings you four new dark rythmic ambient tunes by polarity. Between 100bpm and halftime 85bpm, Drum &amp; Bass and Ambient melting together.
+    p You can access the music via the following services:
+    div.music-services
+      a(href="https://polarity.bandcamp.com/album/dunkel", style="background-image: url(medien-index/services/bandcamp.png);", title="Bandcamp") Bandcamp
+      a(href="https://open.spotify.com/album/0f4ruU90Sop7pJQHa8moNE", style="background-image: url(medien-index/services/spotify.png);", title="Spotify") Spotify
+      a(href="http://www.tidal.com/album/93495295", style="background-image: url(medien-index/services/tidal.png);", title="Tidal") Tidal
+      a(href="https://itunes.apple.com/us/album/dunkel-ep/1425646162?uo=4&app=apple+music", style="background-image: url(medien-index/services/applemusic.png);", title="Apple Music") Apple Music
+      a(href="https://itunes.apple.com/us/album/dunkel-ep/1425646162?uo=4&app=itunes", style="background-image: url(medien-index/services/itunes.png);", title="iTunes") iTunes
+      a(href="http://www.amazon.com/gp/product/B07GD65VNV", style="background-image: url(medien-index/services/amazon.png);", title="Amazon") Amazon
+      a(href="https://play.google.com/store/music/album/Polarity_Dunkel?id=Bpnqc5nivw7hpdwln7kcqiw6a7q", style="background-image: url(medien-index/services/google.png);", title="Google Play") Google Play
+      a(href="https://www.deezer.com/album/70566452", style="background-image: url(medien-index/services/deezer.png);", title="Deezer") Deezer
+      a(style="background-image: url(medien-index/services/beats.png);", title="MediaNet") MediaNet
+      a(style="background-image: url(medien-index/services/facebook.png);", title="MediaNet/Facebook") Facebook
+      a(style="background-image: url(medien-index/services/anghami.png);", title="Anghami") Anghami
+      a(style="background-image: url(medien-index/services/iheart.png);", title="iHeart") iHeart
+      a(style="background-image: url(medien-index/services/imusica.png);", title="iMusica") iMusica
+      a(style="background-image: url(medien-index/services/kkbox.png);", title="KKBox") KKBox
+      a(href="https://us.napster.com/artist/polarity/album/dunkel", style="background-image: url(medien-index/services/napster.png);", title="Napster") Napster
+      a(style="background-image: url(medien-index/services/rdio.png);", title="rdio") rdio
+      a(style="background-image: url(medien-index/services/saavn.png);", title="Saavn") saavn
+    p You can watch the 
+      | teaser video on 
+      i(class="fab fa-youtube") 
+      a(href="https://www.youtube.com/watch?v=Y0D39cESFCw", title='watch the '+title+' video on youtube')  youtube
+      |  or subscribe to 
+      i(class="fab fab fa-patreon")
+      a(href='https://www.patreon.com/polarity_music')  Patreon
+      |  to receive all publications early and inclusive.
+
+
+  //script(type="text/javascript", src="js/bundle.js")

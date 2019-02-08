@@ -4,16 +4,17 @@ block head
 	+Header({title: 'Music by Polarity', base:""})
 
 	// facebook
-	<meta property="og:title" content="Polarity Bitwig Tools">
+	<meta property="og:title" content="Polarity Music">
 	<meta property="og:site_name" content="Polarity Music">
-	<meta property="og:url" content="http://polarity-dnb.de/bitwig.html">
-	<meta property="og:description" content="Free tools, devices, presets and complete projects for Bitwig by Polarity Berlin.">
+	<meta property="og:url" content="http://polarity-dnb.de/music.html">
+	<meta property="og:description" content="Polarity Music Overview">
 	<meta property="og:type" content="website">
-	<meta property="og:image" content="http://polarity-dnb.de/medien-index/sc-bitwig.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="675">
+	<meta property="og:image" content="http://polarity-dnb.de/medien-index/bg-polarity-finger.jpg">
 
 	style.
+		body {
+			background-color: #232121;
+		}
 		.music-cover-list {
 			display: flex;
 		}
@@ -43,30 +44,35 @@ block head
 block body
 	div.content-block
 		+nav()
-		h1 All Polarity Music
-		p Currently there are only cover pictures of my albums or publications. However, a small streaming service for the browser is planned.
+		h1 Polarity Publications
 		p 
 			:markdown
-				With a little bit of support on **[Patreon](https://www.patreon.com/polarity_music)** or **[paypal](https://paypal.me/polaritymusic)**, I would be fine.
+				Here you can browse through all my publications. Click on a cover to learn more. If you want to support my music, you can donate me an amount via **[paypal](https://paypal.me/polaritymusic)** or subscribe to my **[Patreon](https://www.patreon.com/polarity_music)**.
 		p 
 			:markdown
-				Best places to listen are [Youtube](https://www.youtube.com/user/polaritydnb/) and [Spotify](https://open.spotify.com/artist/2ri4hzNaXNZc5RWAUcPXSx) or [dsound](https://dsound.audio/#/@polarity).
-				Best places to buy is [Bandcamp](https://polarity.bandcamp.com/).
+				You can find me also on [Youtube](https://www.youtube.com/user/polaritydnb/), [Spotify](https://open.spotify.com/artist/2ri4hzNaXNZc5RWAUcPXSx), [dsound](https://dsound.audio/#/@polarity) or [Bandcamp](https://polarity.bandcamp.com/).
 
 	div.music-cover-list
+		a.music-cover(href="music-dunkel.html", style="background-image: url(medien-index/cover-dunkel.jpg);")
+			.music-content
+				h2 polarity - Dunkel
+		a.music-cover(href="music-ambient-chillout-tales-i.html", style="background-image: url(medien-index/cover-ambient-chillout-tales-i.jpg);")
+			.music-content
+				h2 polarity - Ambient &mp; Chillout Tales I
+
 		a.music-cover(href="https://polarity.bandcamp.com/album/daily-routine", style="background-image: url(medien-index/cover-daily-routine.jpg);")
 			.music-content
 				h2 polarity - daily routine
+
 		a.music-cover(href="https://polarity.bandcamp.com/album/growing-old", style="background-image: url(medien-index/cover-growing-old.jpg);")
 			.music-content
 				h2 polarity - growing old
 
+	div.music-cover-list
 		a.music-cover(href="https://polarity.bandcamp.com/album/syntax", style="background-image: url(medien-index/cover-PNRLP0005.jpg);")
 			.music-content
 				h2 polarity - syntax
 
-
-	div.music-cover-list
 		a.music-cover(href="https://polarity.bandcamp.com/album/delete-all-your-social-network-accounts", style="background-image: url(medien-index/Cover-Delete-All-Your-Social-Network-Accounts.jpg);")
 			.music-content
 				h2 polarity - delete all your social network accounts
@@ -78,3 +84,5 @@ block body
 		a.music-cover(href="https://polarity.bandcamp.com/album/volksromantik", style="background-image: url(medien-volksromantik/Volksromantik-Cover-Klein.jpg);")
 			.music-content
 				h2 polarity - Volksromantik
+
+	script(type="text/javascript", src="js/bundle.js")
