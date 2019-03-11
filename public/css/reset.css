@@ -43,18 +43,18 @@ h2 {
 	font-size: 2em;
 	margin-bottom: 0.5em;
 }
-p.intro {
+p.intro , .intro p {
 	font-size: 1.5em;
 }
 p.small {
-	font-size: 0.8em;	
+	font-size: 0.8em;
 	font-style: italic;
 }
 ul {
 	margin-left: 1em;
 }
 ul li {
-	margin-bottom: 1em; 
+	margin-bottom: 1em;
 }
 a:link{
 	color: #001B8D;
